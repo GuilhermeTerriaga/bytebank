@@ -4,9 +4,11 @@ public class Conta {
     private int agencia;
     private int numero;
     private Double saldo = 0.0;
-    private String titular;
+    private Cliente titular;
+    private static int total;
 
-    public String getTitular() {
+    public Cliente getTitular() {
+
         return this.titular;
     }
 
@@ -22,20 +24,26 @@ public class Conta {
         return saldo;
     }
 
-    public void setAgencia(int agencia) {
+    public static int getTotal() {
+        return total;
+    }
+
+    private void setAgencia(int agencia) {
         this.agencia = agencia;
     }
 
-    public void setNumero(int numero) {
+    private void setNumero(int numero) {
         this.numero = numero;
     }
 
-    public void setTitular(String titular) {
+    public void setTitular(Cliente titular) {
         this.titular = titular;
     }
 
     public void deposita(Double valor) {
-        this.saldo += valor;
+        if (valor > 0) {
+            this.saldo += valor;
+        }
     }
 
     public boolean saca(Double valor) {
@@ -54,5 +62,15 @@ public class Conta {
         }
         return false;
 
+    }
+
+    public Conta(Cliente titular, int numero, int agencia) {
+        Conta.total++;
+        this.setAgencia(agencia);
+        this.setNumero(numero);
+        this.titular = titular;
+    }
+
+    public Conta() {
     }
 }

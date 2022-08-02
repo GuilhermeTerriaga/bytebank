@@ -1,4 +1,5 @@
-package models;
+
+import models.Conta;
 
 public class TesteReferencias {
     public static void main(String[] args) {
