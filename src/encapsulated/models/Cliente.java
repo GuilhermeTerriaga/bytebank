@@ -1,4 +1,4 @@
-package models;
+package encapsulated.models;
 
 public class Cliente {
     private String nome;

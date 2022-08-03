@@ -1,11 +1,11 @@
-package models;
+package encapsulated.models;
 
 public class Conta {
     private int agencia;
     private int numero;
-    private Double saldo = 0.0;
+    private Double saldo;
     private Cliente titular;
-    private static int total;
+    private static int total = 0;
 
     public Cliente getTitular() {
 
@@ -68,7 +68,7 @@ public class Conta {
         Conta.total++;
         this.setAgencia(agencia);
         this.setNumero(numero);
-        this.titular = titular;
+        this.setTitular(titular);
     }
 
     public Conta() {

@@ -1,5 +1,6 @@
+package encapsulated;
 
-import models.Conta;
+import encapsulated.models.Conta;
 
 public class TesteReferencias {
     public static void main(String[] args) {

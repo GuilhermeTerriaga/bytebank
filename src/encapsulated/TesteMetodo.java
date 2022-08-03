@@ -1,6 +1,5 @@
-
-
-import models.Conta;
+package encapsulated;
+import encapsulated.models.Conta;
 
 public class TesteMetodo {
     public static void main(String[] args) {
