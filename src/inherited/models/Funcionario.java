@@ -3,7 +3,7 @@ package inherited.models;
 public class Funcionario {
     private String nome;
     private String cpf;
-    protected double salario;
+    private double salario;
 
     public Funcionario() {
 
