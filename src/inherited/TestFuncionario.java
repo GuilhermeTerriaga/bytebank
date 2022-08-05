@@ -13,12 +13,12 @@ public class TestFuncionario {
         System.out.println("Funcionario normal " + funcionario.getNome());
         System.out.println("Funcionario normal " + funcionario.getBonificacao());
 
-        Gerente gerente = new Gerente();
+        Funcionario gerente = new Gerente();
         gerente.setNome("gerenteNome");
         gerente.setSalario(4242.50);
         gerente.setCpf("123123");
-        gerente.setSenha(123);
-        System.out.println("Gerente " + gerente.autentica(123));
+        ((Gerente) gerente).setSenha(123);
+        System.out.println("Gerente " + ((Gerente) gerente).autentica(123));
         System.out.println("Gerente " + gerente.getNome());
         System.out.println("Gerente " + gerente.getBonificacao());
     }
