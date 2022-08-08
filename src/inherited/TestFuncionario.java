@@ -1,17 +1,18 @@
 package inherited;
 
+import inherited.models.Designer;
 import inherited.models.Funcionario;
 import inherited.models.Gerente;
 
 public class TestFuncionario {
     public static void main(String[] args) {
-        Funcionario funcionario = new Funcionario();
+        Funcionario funcionario = new Designer();
         funcionario.setNome("Douglas Adams");
         funcionario.setCpf("42424242");
         funcionario.setSalario(42);
 
-        System.out.println("Funcionario normal " + funcionario.getNome());
-        System.out.println("Funcionario normal " + funcionario.getBonificacao());
+        System.out.println("Designer normal " + funcionario.getNome());
+        System.out.println("Designer normal " + funcionario.getBonificacao());
 
         Funcionario gerente = new Gerente();
         gerente.setNome("gerenteNome");
