@@ -1,6 +1,6 @@
 package inherited.models;
 
-public class Conta {
+public abstract class Conta {
     private int agencia;
     private int numero;
     private Double saldo = 0.0;
