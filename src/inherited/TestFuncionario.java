@@ -3,6 +3,7 @@ package inherited;
 import inherited.models.Designer;
 import inherited.models.Funcionario;
 import inherited.models.Gerente;
+import inherited.models.IAutenticavel;
 
 public class TestFuncionario {
     public static void main(String[] args) {
@@ -15,11 +16,12 @@ public class TestFuncionario {
         System.out.println("Designer normal " + funcionario.getBonificacao());
 
         Funcionario gerente = new Gerente();
+        IAutenticavel gerenteAutenticavel = (IAutenticavel) gerente;
         gerente.setNome("gerenteNome");
         gerente.setSalario(4242.50);
         gerente.setCpf("123123");
-        ((Gerente) gerente).setSenha(123);
-        System.out.println("Gerente " + ((Gerente) gerente).autentica(123));
+        gerenteAutenticavel.setSenha(123);
+        System.out.println("Gerente " + gerenteAutenticavel.autentica(123));
         System.out.println("Gerente " + gerente.getNome());
         System.out.println("Gerente " + gerente.getBonificacao());
     }

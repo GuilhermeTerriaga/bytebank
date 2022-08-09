@@ -1,10 +1,12 @@
 package inherited.models;
 
+import inherited.ImplAutenticavel;
+
 public class Cliente implements IAutenticavel {
     private String nome;
     private String cpf;
     private String profissao;
-    private int senha;
+    private ImplAutenticavel autenticacao;
 
     public String getCpf() {
         return cpf;
@@ -34,23 +36,22 @@ public class Cliente implements IAutenticavel {
         this.cpf = cpf;
         this.nome = nome;
         this.profissao = profissao;
+        this.autenticacao = new ImplAutenticavel();
+
     }
 
     public Cliente() {
-
+        this.autenticacao = new ImplAutenticavel();
     }
 
     @Override
     public boolean autentica(int senha) {
-        if (this.senha == senha) {
-            return true;
-        }
-        return false;
+        return autenticacao.autentica(senha);
     }
 
     @Override
     public void setSenha(int senha) {
-        this.senha = senha;
+        this.autenticacao.setSenha(senha);
     }
 
 }

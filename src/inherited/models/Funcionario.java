@@ -1,6 +1,8 @@
 package inherited.models;
 
-public abstract class Funcionario {
+import inherited.models.interfaces.IBonificavel;
+
+public abstract class Funcionario implements IBonificavel {
     private String nome;
     private String cpf;
     private double salario;
@@ -8,8 +10,6 @@ public abstract class Funcionario {
     public Funcionario() {
 
     }
-
-    public abstract double getBonificacao();
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
