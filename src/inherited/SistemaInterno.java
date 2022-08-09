@@ -1,11 +1,11 @@
 package inherited;
 
-import inherited.models.FuncionarioAutenticavel;
+import inherited.models.IAutenticavel;
 
 public class SistemaInterno {
     private int senha = 2222;
 
-    public boolean autentica(FuncionarioAutenticavel funcionarioAutenticavel) {
+    public boolean autentica(IAutenticavel funcionarioAutenticavel) {
         boolean autenticou = funcionarioAutenticavel.autentica(this.senha);
         if (autenticou) {
             System.out.println("Pode entrar");

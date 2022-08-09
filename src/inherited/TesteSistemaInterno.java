@@ -1,22 +1,25 @@
 package inherited;
 
 import inherited.models.Administrador;
-import inherited.models.Funcionario;
-import inherited.models.FuncionarioAutenticavel;
+import inherited.models.Cliente;
 import inherited.models.Gerente;
+import inherited.models.IAutenticavel;
 
 public class TesteSistemaInterno {
     public static void main(String[] args) {
-        Funcionario gerente = new Gerente();
-        ((FuncionarioAutenticavel) gerente).setSenha(2222);
+        IAutenticavel gerente = new Gerente();
+        gerente.setSenha(222);
 
-        Funcionario administrador = new Administrador();
-        ((FuncionarioAutenticavel) administrador).setSenha(2922);
+        IAutenticavel administrador = new Administrador();
+        administrador.setSenha(2922);
+
+        IAutenticavel cliente = new Cliente();
+        cliente.setSenha(2222);
 
         SistemaInterno sistemaInterno = new SistemaInterno();
-        sistemaInterno.autentica((FuncionarioAutenticavel) gerente);
-        sistemaInterno.autentica((FuncionarioAutenticavel) administrador);
-
+        sistemaInterno.autentica(gerente);
+        sistemaInterno.autentica(administrador);
+        sistemaInterno.autentica(cliente);
     }
 
 }
