@@ -1,6 +1,7 @@
 package inherited.models;
 
-import inherited.ImplAutenticavel;
+import inherited.models.interfaces.IAutenticavel;
+import inherited.util.ImplAutenticavel;
 
 public class Cliente implements IAutenticavel {
     private String nome;

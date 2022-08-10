@@ -3,7 +3,7 @@ package inherited;
 import inherited.models.Designer;
 import inherited.models.Funcionario;
 import inherited.models.Gerente;
-import inherited.models.IAutenticavel;
+import inherited.models.interfaces.IAutenticavel;
 
 public class TestFuncionario {
     public static void main(String[] args) {

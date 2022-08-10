@@ -1,6 +1,7 @@
 package inherited.models;
 
-import inherited.ImplAutenticavel;
+import inherited.models.interfaces.IAutenticavel;
+import inherited.util.ImplAutenticavel;
 
 public class Administrador extends Funcionario implements IAutenticavel {
     private ImplAutenticavel autenticacao;

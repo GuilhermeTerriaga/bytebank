@@ -1,9 +1,10 @@
 package inherited;
 
+import inherited.control.SistemaInterno;
 import inherited.models.Administrador;
 import inherited.models.Cliente;
 import inherited.models.Gerente;
-import inherited.models.IAutenticavel;
+import inherited.models.interfaces.IAutenticavel;
 
 public class TesteSistemaInterno {
     public static void main(String[] args) {

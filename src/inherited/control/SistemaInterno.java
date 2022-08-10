@@ -1,6 +1,6 @@
-package inherited;
+package inherited.control;
 
-import inherited.models.IAutenticavel;
+import inherited.models.interfaces.IAutenticavel;
 
 public class SistemaInterno {
     private int senha = 2222;

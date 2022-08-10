@@ -1,6 +1,6 @@
 package inherited.control;
 
-import inherited.models.IBonificavel;
+import inherited.models.interfaces.IBonificavel;
 
 public class ControleBonificacao {
 
