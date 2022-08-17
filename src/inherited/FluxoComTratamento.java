@@ -1,31 +1,33 @@
 package inherited;
 
-import inherited.util.Exceptions.MyOwnException;
+import inherited.models.Conta;
 
-public class Fluxo {
+public class FluxoComTratamento {
 
     public static void main(String[] args) {
         System.out.println("Ini do main");
         try {
             metodo1();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             e.printStackTrace();
         }
         System.out.println("Fim do main");
     }
 
-    public static void metodo1() throws MyOwnException {
+    public static void metodo1() {
         System.out.println("Ini do metodo1");
         metodo2();
         System.out.println("Fim do metodo1");
     }
 
-    private static void metodo2() throws MyOwnException {
+    private static void metodo2() {
         System.out.println("Ini do metodo2");
-
-        throw new MyOwnException("problema!");
-
-        // System.out.println("Fim do metodo2");
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(i);
+            // int j = i / 0;
+            Conta conta = null;
+            conta.deposita(42.00);
+        }
+        System.out.println("Fim do metodo2");
     }
 }

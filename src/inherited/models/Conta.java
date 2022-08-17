@@ -1,5 +1,7 @@
 package inherited.models;
 
+import inherited.util.Exceptions.SaldoInsuficienteEx;
+
 public abstract class Conta {
     private int agencia;
     private int numero;
@@ -46,22 +48,17 @@ public abstract class Conta {
         }
     }
 
-    public boolean saca(Double valor) {
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
-            return true;
+    public void saca(Double valor) {
+        if (this.saldo < valor) {
+            throw new SaldoInsuficienteEx(
+                    "Saldo insuficente para saque!\nSaldo:" + this.saldo + "\nValor a sacar: " + valor);
         }
-        return false;
-
+        this.saldo -= valor;
     }
 
-    public boolean transfere(Conta destino, Double valor) {
-        if (this.saca(valor)) {
-            destino.deposita(valor);
-            return true;
-        }
-        return false;
-
+    public void transfere(Conta destino, Double valor) {
+        this.saca(valor);
+        destino.deposita(valor);
     }
 
     public Conta(Cliente titular, int numero, int agencia) {
