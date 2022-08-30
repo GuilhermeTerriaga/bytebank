@@ -3,6 +3,13 @@ package br.com.bytebank.bank.inherited.models;
 import br.com.bytebank.bank.inherited.models.interfaces.IAutenticavel;
 import br.com.bytebank.bank.inherited.util.ImplAutenticavel;
 
+/**
+ * Teste de javadoc
+ * 
+ * @author Guilherme Terriaga
+ * @version 1.0
+ * 
+ */
 public class Cliente implements IAutenticavel {
     private String nome;
     private String cpf;

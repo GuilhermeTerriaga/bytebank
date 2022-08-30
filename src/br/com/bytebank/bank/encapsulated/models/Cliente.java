@@ -5,26 +5,44 @@ public class Cliente {
     private String cpf;
     private String profissao;
 
+    /**
+     * @return String
+     */
     public String getCpf() {
         return cpf;
     }
 
+    /**
+     * @return String
+     */
     public String getProfissao() {
         return profissao;
     }
 
+    /**
+     * @return String
+     */
     public String getNome() {
         return nome;
     }
 
+    /**
+     * @param cpf
+     */
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
+    /**
+     * @param nome
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    /**
+     * @param profissao
+     */
     public void setProfissao(String profissao) {
         this.profissao = profissao;
     }

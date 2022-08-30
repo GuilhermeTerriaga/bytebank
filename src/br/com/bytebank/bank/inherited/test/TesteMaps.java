@@ -10,7 +10,10 @@ public class TesteMaps {
         List<String> list = new ArrayList<>();
         // list.add("item 1 da lista");
         bars.put(1L, list);
-        if (bars.get(bars.keySet().iterator().next()).isEmpty()) {
+        if (bars.isEmpty()) {
+            System.out.println("vazio");
+        }
+        if (bars.get(bars.keySet().iterator().next()).isEmpty()) { // Valida se o primeiro item da lista existe
             System.out.println("Empty");
         } else {
             System.out.println("Not Empty");
