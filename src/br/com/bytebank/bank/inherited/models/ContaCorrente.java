@@ -18,4 +18,9 @@ public class ContaCorrente extends Conta implements ITributavel {
         return this.getSaldo() * 0.15;
     }
 
+    @Override
+    public String toString() {
+        return "Conta Corrente " + super.toString();
+    }
+
 }
