@@ -1,6 +1,7 @@
 package br.com.bytebank.bank.inherited.test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import br.com.bytebank.bank.inherited.models.Cliente;
 import br.com.bytebank.bank.inherited.models.Conta;
@@ -9,7 +10,9 @@ import br.com.bytebank.bank.inherited.models.ContaPoupacanca;
 
 public class TestArrayList {
     public static void main(String[] args) {
-        ArrayList<Conta> lista = new ArrayList<Conta>();
+        List<Conta> lista = new ArrayList<Conta>();
+        // List<Conta> lista = new Vector()<Conta>();
+        // List<Conta> lista = new LinkedList()<Conta>();
         Cliente cliente = new Cliente("profissao", "nome", "cpf");
         Conta contaC = new ContaCorrente(cliente, 123, 321);
         lista.add(contaC);
