@@ -9,7 +9,7 @@ import br.com.bytebank.bank.inherited.models.Conta;
 import br.com.bytebank.bank.inherited.models.ContaCorrente;
 import br.com.bytebank.bank.inherited.models.ContaPoupacanca;
 
-public class Test {
+public class TestAnonymClass {
     public static void main(String[] args) {
         List<Conta> lista = new ArrayList<Conta>();
         Conta cc1 = new ContaCorrente(66, 33);
