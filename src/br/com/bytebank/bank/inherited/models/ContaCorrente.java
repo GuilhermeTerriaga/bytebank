@@ -8,6 +8,10 @@ public class ContaCorrente extends Conta implements ITributavel {
         super(titular, numero, agencia);
     }
 
+    public ContaCorrente(int numero, int agencia) {
+        super(numero, agencia);
+    }
+
     @Override
     public void saca(Double valor) {
         super.saca(valor + 0.2);
