@@ -51,3 +51,5 @@ public class TestLambda {
                 .println(conta + " nome " + conta.getTitular().getNome() + " saldo " + conta.getSaldo() + "\n"));
     }
 }
+
+

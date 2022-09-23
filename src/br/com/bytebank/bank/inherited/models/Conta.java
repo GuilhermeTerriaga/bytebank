@@ -1,5 +1,7 @@
 package br.com.bytebank.bank.inherited.models;
 
+import java.io.Serializable;
+
 import br.com.bytebank.bank.inherited.util.Exceptions.SaldoInsuficienteEx;
 
 /**
@@ -10,11 +12,11 @@ import br.com.bytebank.bank.inherited.util.Exceptions.SaldoInsuficienteEx;
  * 
  */
 
-public abstract class Conta implements Comparable<Conta> {
+public abstract class Conta implements Comparable<Conta>, Serializable {
     private int agencia;
     private int numero;
     private Double saldo = 0.0;
-    private Cliente titular;
+    private transient Cliente titular;
     private static int total = 0;
 
     /**

@@ -1,5 +1,7 @@
 package br.com.bytebank.bank.inherited.models;
 
+import java.io.Serializable;
+
 import br.com.bytebank.bank.inherited.models.interfaces.IAutenticavel;
 import br.com.bytebank.bank.inherited.util.ImplAutenticavel;
 
@@ -10,11 +12,13 @@ import br.com.bytebank.bank.inherited.util.ImplAutenticavel;
  * @version 1.0
  * 
  */
-public class Cliente implements IAutenticavel {
+public class Cliente implements IAutenticavel, Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String nome;
     private String cpf;
     private String profissao;
-    private ImplAutenticavel autenticacao;
+    private transient ImplAutenticavel autenticacao;
 
     public String getCpf() {
         return cpf;
